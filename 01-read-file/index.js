@@ -8,7 +8,6 @@ async function getFileData() {
   const folderPath = process.argv[1];
   const folderName = path.basename(folderPath);
   const filePath = `./${folderName}/text.txt`;
-
   // read file 
   try {
     const data = await readFile(filePath, { encoding: 'utf8' });
@@ -17,4 +16,4 @@ async function getFileData() {
     console.log(err);
   }
 }
-getFileData()
+getFileData();
